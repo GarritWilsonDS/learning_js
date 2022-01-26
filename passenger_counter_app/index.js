@@ -7,6 +7,7 @@
 // change the count-el in the html to reflect new count
 
 let count = 0
+let savedCounts = ""
 
 let countEl = document.getElementById("count-el");
 let saveEl = document.getElementById("saved-el");
@@ -27,8 +28,14 @@ function decrease(){
 
 function save(){
     console.log("saved count");
-    saveEl.innerText = count;
+
+    if (savedCounts == ""){
+        saveEl.innerText = savedCounts += count;
+    } else {
+        saveEl.innerText = savedCounts += "-" + count;
+    }
     console.log("count saved");
+    
     count = 0;
     countEl.innerText = count;
     console.log("reset count");
