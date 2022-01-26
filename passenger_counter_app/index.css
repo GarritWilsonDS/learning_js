@@ -29,10 +29,14 @@ button {
 }
 
 #increment-btn {
-    background: darkred;
+    background: darkgreen;
+}
+
+#decrease-btn {
+    background: darkred
 }
 
 #save-btn {
-    background: darkgreen;
+    background: grey;
 }
 
