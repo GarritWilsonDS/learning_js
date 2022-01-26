@@ -6,11 +6,19 @@
 // increment the count variable when the button is clicked (log it out)
 // change the count-el in the html to reflect new count
 
+let welcomeEl = document.getElementById("welcome-el");
+let countEl = document.getElementById("count-el");
+let saveEl = document.getElementById("saved-el");
+
+let firstName = "Garrit"
+let greetingMessage = "Welcome "
 let count = 0
 let savedCounts = ""
 
-let countEl = document.getElementById("count-el");
-let saveEl = document.getElementById("saved-el");
+
+function greeting(){
+    welcomeEl.innerText = greetingMessage + firstName;
+}
 
 function increment(){
     console.log("increased by 1");
@@ -20,10 +28,15 @@ function increment(){
 }
 
 function decrease(){
-    console.log("decreased by 1");
-    count--;
-    countEl.innerText = count;
-    console.log(count);
+    if (countEl.innerText != 0){
+        console.log("decreased by 1");
+        count--;
+        countEl.innerText = count;
+        console.log(count);
+    } else {
+        alert("Cannot have negative number of passengers!")
+    }
+    
 }
 
 function save(){
