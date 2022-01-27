@@ -6,9 +6,9 @@
 // increment the count variable when the button is clicked (log it out)
 // change the count-el in the html to reflect new count
 
-let welcomeEl = document.getElementById("welcome-el");
-let countEl = document.getElementById("count-el");
-let saveEl = document.getElementById("saved-el");
+// let welcomeEl = document.getElementById("welcome-el");
+// let countEl = document.getElementById("count-el");
+// let saveEl = document.getElementById("saved-el");
 
 let firstName = "Garrit"
 let greetingMessage = "Welcome "
@@ -17,13 +17,13 @@ let savedCounts = ""
 
 
 function greeting(){
-    welcomeEl.innerText = greetingMessage + firstName;
+    welcomeEl.textContent = greetingMessage + firstName;
 }
 
 function increment(){
     console.log("increased by 1");
     count++;
-    countEl.innerText = count;
+    countEl.textContent = count;
     console.log(count);
 }
 
@@ -31,7 +31,7 @@ function decrease(){
     if (countEl.innerText != 0){
         console.log("decreased by 1");
         count--;
-        countEl.innerText = count;
+        countEl.textContent = count;
         console.log(count);
     } else {
         alert("Cannot have negative number of passengers!")
@@ -65,9 +65,11 @@ function incrementByOne(x) {
     return x
 }
 
-for (let i = 0; i<7; i++){
+for (let i = 0; i<8; i++){
     lapsCompleted = incrementByOne(lapsCompleted);
 }
 
-
 // console.log(lapsCompleted)
+
+
+//// practicing variables
